@@ -14,7 +14,10 @@ public class pickupObject : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         vrCam = Camera.main.transform;
-        hand = vrCam.Find("Hand");
+        if (vrCam != null)
+        {
+            hand = vrCam.Find("Hand");
+        }
 	}
 	
 	// Update is called once per frame

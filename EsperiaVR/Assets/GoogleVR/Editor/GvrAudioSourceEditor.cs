@@ -180,7 +180,7 @@ public class GvrAudioSourceEditor : Editor {
   /// @endcond
 
   private void DrawDirectivityPattern (int size) {
-    directivityTexture.Resize(size, size);
+    directivityTexture.Reinitialize(size, size);
     // Draw the axes.
     Color axisColor = 0.5f * Color.black;
     for (int i = 0; i < size; ++i) {
