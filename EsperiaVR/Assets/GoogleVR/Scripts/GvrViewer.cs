@@ -36,7 +36,7 @@ public class GvrViewer : MonoBehaviour {
     get {
 #if UNITY_EDITOR
       if (instance == null && !Application.isPlaying) {
-        instance = UnityEngine.Object.FindObjectOfType<GvrViewer>();
+        instance = UnityEngine.Object.FindFirstObjectByType<GvrViewer>();
       }
 #endif
       if (instance == null) {
@@ -56,8 +56,9 @@ public class GvrViewer : MonoBehaviour {
 
   /// Generate a GvrViewer instance.  Takes no action if one already exists.
   public static void Create() {
-    if (instance == null && UnityEngine.Object.FindObjectOfType<GvrViewer>() == null) {
-      Debug.Log("Creating GvrViewer object");
+        //20250510 adriano: if (instance == null && UnityEngine.Object.FindObjectOfType<GvrViewer>() == null) {
+    if (instance == null && UnityEngine.Object.FindFirstObjectByType<GvrViewer>() == null){
+            Debug.Log("Creating GvrViewer object");
       var go = new GameObject("GvrViewer", typeof(GvrViewer));
       go.transform.localPosition = Vector3.zero;
       // sdk will be set by Awake().
@@ -93,7 +94,7 @@ public class GvrViewer : MonoBehaviour {
 #if !UNITY_HAS_GOOGLEVR || UNITY_EDITOR
       return vrModeEnabled;
 #else
-      return UnityEngine.VR.VRSettings.enabled;
+      return UnityEngine.XR.XRSettings.enabled;
 #endif  // !UNITY_HAS_GOOGLEVR || UNITY_EDITOR
     }
     set {
@@ -404,13 +405,13 @@ public class GvrViewer : MonoBehaviour {
 
 #if !UNITY_HAS_GOOGLEVR || UNITY_EDITOR
   void AddPrePostRenderStages() {
-    var preRender = UnityEngine.Object.FindObjectOfType<GvrPreRender>();
+    var preRender = UnityEngine.Object.FindFirstObjectByType<GvrPreRender>();
     if (preRender == null) {
       var go = new GameObject("PreRender", typeof(GvrPreRender));
       go.SendMessage("Reset");
       go.transform.parent = transform;
     }
-    var postRender = UnityEngine.Object.FindObjectOfType<GvrPostRender>();
+    var postRender = UnityEngine.Object.FindFirstObjectByType<GvrPostRender>();
     if (postRender == null) {
       var go = new GameObject("PostRender", typeof(GvrPostRender));
       go.SendMessage("Reset");

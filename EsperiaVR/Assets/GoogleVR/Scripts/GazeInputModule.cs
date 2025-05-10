@@ -20,6 +20,8 @@
 //   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //   THE SOFTWARE.
 
+using System.Collections.Generic;
+using System.Security.Principal;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -213,14 +215,24 @@ public class GazeInputModule : BaseInputModule {
     /// @endcond
 
     private void CastRayFromGaze() {
-    Quaternion headOrientation;
+    Quaternion headOrientation=Quaternion.identity; ;
 #if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
-    headOrientation = InputTracking.GetLocalRotation(XRNode.Head);
+        //20250510 adriano: headOrientation = InputTracking.GetLocalRotation(XRNode.Head);
+        List<XRNodeState> nodeStatesCache = new List<XRNodeState>();
+        InputTracking.GetNodeStates(nodeStatesCache);
+        for (int i = 0; i < nodeStatesCache.Count; i++)
+        {
+            XRNodeState nodeState = nodeStatesCache[i];
+            if (nodeState.nodeType == XRNode.Head)
+            {
+                nodeState.TryGetRotation(out headOrientation);
+            }
+        }
 #else
     headOrientation = GvrViewer.Instance.HeadPose.Orientation;
 #endif  // UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
 
-    Vector2 headPose = NormalizedCartesianToSpherical(headOrientation * Vector3.forward);
+            Vector2 headPose = NormalizedCartesianToSpherical(headOrientation * Vector3.forward);
 
     if (pointerData == null) {
       pointerData = new PointerEventData(eventSystem);
