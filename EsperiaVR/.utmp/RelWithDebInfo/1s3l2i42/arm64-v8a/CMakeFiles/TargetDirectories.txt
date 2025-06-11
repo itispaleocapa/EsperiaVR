@@ -1,0 +1,5 @@
+C:/Users/bertazza.22106/Desktop/EsperiaVR-master/EsperiaVR/.utmp/RelWithDebInfo/1s3l2i42/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/bertazza.22106/Desktop/EsperiaVR-master/EsperiaVR/.utmp/RelWithDebInfo/1s3l2i42/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/bertazza.22106/Desktop/EsperiaVR-master/EsperiaVR/.utmp/RelWithDebInfo/1s3l2i42/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/bertazza.22106/Desktop/EsperiaVR-master/EsperiaVR/.utmp/RelWithDebInfo/1s3l2i42/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/bertazza.22106/Desktop/EsperiaVR-master/EsperiaVR/.utmp/RelWithDebInfo/1s3l2i42/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

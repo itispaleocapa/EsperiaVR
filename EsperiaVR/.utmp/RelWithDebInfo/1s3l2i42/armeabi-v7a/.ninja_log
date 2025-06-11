@@ -1,0 +1,10 @@
+# ninja log v5
+13	767	7712526326660035	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2e8dd8d3199e5cfe
+10	781	7712526326766494	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a3cd49dc6fef20e8
+0	784	7712526326807236	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6439c1f6cd02eeb6
+23	786	7712526326807236	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	17d5ad4106bc24ca
+7	797	7712526326956719	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	358642f46b2f9960
+29	893	7712526327908574	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	7133586e9df6f869
+18	982	7712526328822007	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	e0ce8386920c83d4
+4	1031	7712526329293796	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	365efab597ae33aa
+1031	1123	7712526330253751	C:/Users/bertazza.22106/Desktop/EsperiaVR-master/EsperiaVR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1s3l2i42/obj/armeabi-v7a/libgame.so	c2f4fa9ae853ef49

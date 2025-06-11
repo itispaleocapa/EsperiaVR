@@ -6,7 +6,6 @@ public class ApriChiudi : MonoBehaviour {
 
     private Animator myAnim;
     private bool isopen;
-
     // Use this for initialization
     void Start()
     {
@@ -15,21 +14,23 @@ public class ApriChiudi : MonoBehaviour {
 
     public void toggleStatus()
     {
-        if (isopen) close();
-        else open();
+        if (isopen==true) 
+            close();
+        else 
+            open();
     }
 
     void open()
     {
-        //Debug.Log("apri");
+        Debug.Log("apri");
         isopen = true;
         myAnim.SetBool("open", isopen);
     }
 
     void close()
     {
-        //Debug.Log("chiudi");
-        isopen = false;
-        myAnim.SetBool("open", isopen);
+        Debug.Log("chiudi");
+         isopen = false;
+         myAnim.SetBool("open", isopen);
     }
 }
