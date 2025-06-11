@@ -1,0 +1,2 @@
+C:\Users\bertazza.22106\Desktop\EsperiaVR-master\EsperiaVR\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\bertazza.22106\Desktop\EsperiaVR-master\EsperiaVR\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
