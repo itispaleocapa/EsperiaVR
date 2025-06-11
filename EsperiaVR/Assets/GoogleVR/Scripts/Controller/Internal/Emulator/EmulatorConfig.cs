@@ -20,7 +20,7 @@ namespace Gvr.Internal {
     public static EmulatorConfig Instance {
       get {
         if (instance == null) {
-          EmulatorConfig[] configs = (EmulatorConfig[]) FindObjectsOfType(typeof(EmulatorConfig));
+                    EmulatorConfig[] configs = (EmulatorConfig[])FindObjectsOfType(typeof(EmulatorConfig));
           if (configs.Length == 1) {
             instance = configs[0];
           } else if (configs.Length > 1) {
