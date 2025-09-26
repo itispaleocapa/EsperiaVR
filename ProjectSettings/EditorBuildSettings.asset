@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/_Scenes/VRMain.unity
+    guid: b3effbebdedffa141b862e78e4f33e22
+  - enabled: 1
+    path: Assets/_Scenes/Piano1/Atrio1.unity
+    guid: b472cd890c2779e48a5f3d5c4a5de29c
+  - enabled: 1
+    path: Assets/_Scenes/Piano1/Aula1_1.unity
+    guid: f0c1b6dd7ccc0db468015699db27fb74
+  - enabled: 1
+    path: Assets/_Scenes/Piano1/Aula1_3.unity
+    guid: 2ac113d3fc4bb4c4cbd2af8ee2d88b38
+  - enabled: 1
+    path: Assets/_Scenes/Piano1/Bagni1.unity
+    guid: f5475a9c0a68dd84ab187a21dd674499
+  - enabled: 1
+    path: Assets/_Scenes/Piano1/Lab1_1.unity
+    guid: 9459792b136c7e447973371429ca7084
+  - enabled: 1
+    path: Assets/_Scenes/Piano1/Lab1_2.unity
+    guid: 7694253402b4ffd47a9f57bcd5bb402c
+  - enabled: 1
+    path: Assets/_Scenes/Piano2/Atrio2.unity
+    guid: d47d2f68dae0f2146ab0f852ed2ec9ab
+  - enabled: 1
+    path: Assets/_Scenes/Piano2/Aula2_1.unity
+    guid: 22e0849fa5fe13f4cab46b98fe64da59
+  - enabled: 1
+    path: Assets/_Scenes/Piano2/Aula2_2.unity
+    guid: 0d289fa882ed72948881e80070d4021f
+  - enabled: 1
+    path: Assets/_Scenes/Piano2/Aula2_3.unity
+    guid: 8e00c017f39bbbc4faf080b53b4e43dd
+  - enabled: 1
+    path: Assets/_Scenes/Piano2/Bagni2.unity
+    guid: 195c2a42d90834d469b9afbd9ed3ab00
+  - enabled: 1
+    path: Assets/_Scenes/Piano2/Lab2_1.unity
+    guid: ed4c3565b5abb844bbb9da367f71508c
+  - enabled: 1
+    path: Assets/_Scenes/Piano2/Lab2_2.unity
+    guid: 5465f122879608c45b462f9617f0bc3e
+  - enabled: 1
+    path: Assets/_Scenes/Piano3/Atrio3.unity
+    guid: f808964397d718146a84656e9e9446c1
+  - enabled: 1
+    path: Assets/_Scenes/Piano3/Aula3_1.unity
+    guid: 97127c97b2d03c24da63206c24c0aa45
+  - enabled: 1
+    path: Assets/_Scenes/Piano3/Aula3_2.unity
+    guid: b068a0ee9938a7747940e5dfbc40cc2c
+  - enabled: 1
+    path: Assets/_Scenes/Piano3/Aula3_3.unity
+    guid: 338fa87befbeeae43a0efcfdfb32cc64
+  - enabled: 1
+    path: Assets/_Scenes/Piano3/Aula3_4.unity
+    guid: 7e9f62ddaac69a54fa5fe4815ff9ffa5
+  - enabled: 1
+    path: Assets/_Scenes/Piano3/Bagni3.unity
+    guid: cfb4c31752c684a469870ffcf7fe5c06
+  - enabled: 1
+    path: Assets/_Scenes/Skydome.unity
+    guid: 8633e58929697084b829b5ab82227bc7
+  - enabled: 1
+    path: Assets/_Scenes/Elevator.unity
+    guid: a29d287ce4b69844ea18b0d3ff5a1f72
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e804cebfea938954f84fdd6a47a0b247, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f0bf955e64ec66142b7c960dc3114e25, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 6e2fe94fb3583bc41ba0b3e77b7dca65, type: 2}
+  m_UseUCBPForAssetBundles: 0
