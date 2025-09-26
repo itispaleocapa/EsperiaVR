@@ -13,4 +13,5 @@ Modelli 3D realizzati con Blender
 
 2025-06-17 sistemare alcune animazioni. se un'animazione non funziona agganciarlo a un prefab nell'ononima cartella e deselezionare la casella static in alto a destra.
 
-2025-09-26 aggiornato alla versione 6.1, animazioni sistemate, aggiornato al nuovo sistema di input, utilizzo del sistema di renderizzazione URP.
+2025-09-26 aggiornato alla versione 6.1, animazioni sistemate, aggiornato al nuovo sistema di input, utilizzo del sistema di renderizzazione URP, eliminate cartelle inutili.
+
