@@ -74,6 +74,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Elevator.unity
     guid: a29d287ce4b69844ea18b0d3ff5a1f72
+  - enabled: 1
+    path: Assets/_Scenes/Piano1/Aula1_2.unity
+    guid: ae84a73f218de3346b9ae30d00e6f2de
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e804cebfea938954f84fdd6a47a0b247, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
