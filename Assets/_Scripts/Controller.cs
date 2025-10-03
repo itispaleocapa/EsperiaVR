@@ -9,7 +9,6 @@ using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
-
     public Transform visuale;
     public float speed = 3.0f;
     public float angoloMin = 45.0f;
@@ -20,6 +19,7 @@ public class Controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep; //impedisce allo schermo di spegnersi
         cc = GetComponent<CharacterController>();
         Cursor.visible = false;
     }
@@ -34,12 +34,14 @@ public class Controller : MonoBehaviour
             cc.SimpleMove(visuale.forward * speed);
         }   
     }
+    //movimento tramite nuovo sistema input
     void OnMove(InputValue movementvalue)
     {
         Vector2 movementVector = movementvalue.Get<Vector2>();
         v = movementVector.y;
         h = movementVector.x;
     }
+    //rotazione tramite nuovo sistema input
     void OnLook(InputValue lookvalue)
     {
         Vector2 lookVector = lookvalue.Get<Vector2>();
