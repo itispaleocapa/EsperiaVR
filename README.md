@@ -15,3 +15,4 @@ Modelli 3D realizzati con Blender
 
 2025-09-26 aggiornato alla versione 6.1, animazioni sistemate, aggiornato al nuovo sistema di input, utilizzo del sistema di renderizzazione URP, eliminate cartelle inutili.
 
+2025-10-03 Aggiunto codice per evitare che lo schermo del cellulare si spegnesse automaticamente. Rimossi i file APK da .gitignore.
