@@ -18,3 +18,4 @@ Modelli 3D realizzati con Blender
 
 2025-10-15 aggiunto ascensore @edoardohtml 
 
+2026-04-27 ricalcolata l'lluminazione delle scene, eliminato scena e prefab inutilizzati, modificato input system comandi non VR non funzionanti, aggiunti poster.
