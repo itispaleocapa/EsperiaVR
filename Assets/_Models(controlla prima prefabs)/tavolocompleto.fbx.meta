@@ -1,86 +1,277 @@
 fileFormatVersion: 2
 guid: 9f99780a21ab2354fa723e2c794ba67f
-timeCreated: 1496660533
-licenseType: Free
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: MonitorDx
-    100002: MonitorSx
-    100004: MouseDx
-    100006: MouseSx
-    100008: PcSx
-    100010: PcSx.001
-    100012: TastieraDx
-    100014: TastieraSx
-    100016: Tavolo
-    100018: //RootNode
-    400000: MonitorDx
-    400002: MonitorSx
-    400004: MouseDx
-    400006: MouseSx
-    400008: PcSx
-    400010: PcSx.001
-    400012: TastieraDx
-    400014: TastieraSx
-    400016: Tavolo
-    400018: //RootNode
-    2300000: MonitorDx
-    2300002: MonitorSx
-    2300004: MouseDx
-    2300006: MouseSx
-    2300008: PcSx
-    2300010: PcSx.001
-    2300012: TastieraDx
-    2300014: TastieraSx
-    2300016: Tavolo
-    3300000: MonitorDx
-    3300002: MonitorSx
-    3300004: MouseDx
-    3300006: MouseSx
-    3300008: PcSx
-    3300010: PcSx.001
-    3300012: TastieraDx
-    3300014: TastieraSx
-    3300016: Tavolo
-    4300000: MouseSx
-    4300002: MonitorSx
-    4300004: Tavolo
-    4300006: PcSx
-    4300008: MonitorDx
-    4300010: MouseDx
-    4300012: TastieraDx
-    4300014: PcSx.001
-    4300016: TastieraSx
-    6400000: MonitorDx
-    6400002: MonitorSx
-    6400004: MouseDx
-    6400006: MouseSx
-    6400008: PcSx
-    6400010: PcSx.001
-    6400012: TastieraDx
-    6400014: TastieraSx
-    6400016: Tavolo
+  serializedVersion: 24200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: MonitorDx
+  - first:
+      1: 100002
+    second: MonitorSx
+  - first:
+      1: 100004
+    second: MouseDx
+  - first:
+      1: 100006
+    second: MouseSx
+  - first:
+      1: 100008
+    second: PcSx
+  - first:
+      1: 100010
+    second: PcSx.001
+  - first:
+      1: 100012
+    second: TastieraDx
+  - first:
+      1: 100014
+    second: TastieraSx
+  - first:
+      1: 100016
+    second: Tavolo
+  - first:
+      1: 100018
+    second: //RootNode
+  - first:
+      4: 400000
+    second: MonitorDx
+  - first:
+      4: 400002
+    second: MonitorSx
+  - first:
+      4: 400004
+    second: MouseDx
+  - first:
+      4: 400006
+    second: MouseSx
+  - first:
+      4: 400008
+    second: PcSx
+  - first:
+      4: 400010
+    second: PcSx.001
+  - first:
+      4: 400012
+    second: TastieraDx
+  - first:
+      4: 400014
+    second: TastieraSx
+  - first:
+      4: 400016
+    second: Tavolo
+  - first:
+      4: 400018
+    second: //RootNode
+  - first:
+      23: 2300000
+    second: MonitorDx
+  - first:
+      23: 2300002
+    second: MonitorSx
+  - first:
+      23: 2300004
+    second: MouseDx
+  - first:
+      23: 2300006
+    second: MouseSx
+  - first:
+      23: 2300008
+    second: PcSx
+  - first:
+      23: 2300010
+    second: PcSx.001
+  - first:
+      23: 2300012
+    second: TastieraDx
+  - first:
+      23: 2300014
+    second: TastieraSx
+  - first:
+      23: 2300016
+    second: Tavolo
+  - first:
+      33: 3300000
+    second: MonitorDx
+  - first:
+      33: 3300002
+    second: MonitorSx
+  - first:
+      33: 3300004
+    second: MouseDx
+  - first:
+      33: 3300006
+    second: MouseSx
+  - first:
+      33: 3300008
+    second: PcSx
+  - first:
+      33: 3300010
+    second: PcSx.001
+  - first:
+      33: 3300012
+    second: TastieraDx
+  - first:
+      33: 3300014
+    second: TastieraSx
+  - first:
+      33: 3300016
+    second: Tavolo
+  - first:
+      43: 4300000
+    second: MouseSx
+  - first:
+      43: 4300002
+    second: MonitorSx
+  - first:
+      43: 4300004
+    second: Tavolo
+  - first:
+      43: 4300006
+    second: PcSx
+  - first:
+      43: 4300008
+    second: MonitorDx
+  - first:
+      43: 4300010
+    second: MouseDx
+  - first:
+      43: 4300012
+    second: TastieraDx
+  - first:
+      43: 4300014
+    second: PcSx.001
+  - first:
+      43: 4300016
+    second: TastieraSx
+  - first:
+      64: 6400000
+    second: MonitorDx
+  - first:
+      64: 6400002
+    second: MonitorSx
+  - first:
+      64: 6400004
+    second: MouseDx
+  - first:
+      64: 6400006
+    second: MouseSx
+  - first:
+      64: 6400008
+    second: PcSx
+  - first:
+      64: 6400010
+    second: PcSx.001
+  - first:
+      64: 6400012
+    second: TastieraDx
+  - first:
+      64: 6400014
+    second: TastieraSx
+  - first:
+      64: 6400016
+    second: Tavolo
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 925744d733e3492439a6de0292471146, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.000
+    second: {fileID: 2100000, guid: 3e7988e4863eed843998714ca507f00f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 458b8db32af541d4ea93fa174e372efd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 643d5b4d8c481fe4297f952374e86438, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 140eb3fd12c467541a60b13c185cd112, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 8916f076466f7114cb1dd35bd5e4c2d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 27c8653bd748735418e49814418f14f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: 16aa31bace8e6d44a9420158ae5d3702, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: 7286fc10369f88d4291e234db8ca8a5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.009
+    second: {fileID: 2100000, guid: 011a7b01e918e5f4a984e897e8f9c0ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.010
+    second: {fileID: 2100000, guid: 4fc0fd16b037884489882c45cba0428a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.011
+    second: {fileID: 2100000, guid: 8f0b0207dd5e94b4798d5c45958ba9d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.012
+    second: {fileID: 2100000, guid: 925744d733e3492439a6de0292471146, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.013
+    second: {fileID: 2100000, guid: 471112d7f48d73b45b9576923760e7c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.014
+    second: {fileID: 2100000, guid: 16aa31bace8e6d44a9420158ae5d3702, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -88,26 +279,52 @@ ModelImporter:
     globalScale: 0.5
     meshCompression: 0
     addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -117,14 +334,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.5
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

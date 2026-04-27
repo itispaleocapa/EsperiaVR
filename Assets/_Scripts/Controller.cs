@@ -1,60 +1,66 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System;
+using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
     public Transform visuale;
     public float speed = 3.0f;
-    public float angoloMin = 45.0f;
-    public float angoloMax = 60.0f;
     private CharacterController cc;
-    private float v ;
-    private float h ;
+    private float time;
+    private static WaitForSeconds _wait = new WaitForSeconds(1.5f);
+    float x, y;
+    float angoloMax = 60f;
+    float angoloMin = 45f;
+    float mouseX, mouseY;
+    public VrModeController vrModeController;
     // Use this for initialization
     void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep; //impedisce allo schermo di spegnersi
         cc = GetComponent<CharacterController>();
         Cursor.visible = false;
+        vrModeController = GetComponent<VrModeController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (v != 0 || h != 0)
-            cc.SimpleMove(((visuale.forward * v) + (visuale.right * h)) * speed);
-        else if (visuale.eulerAngles.x >= angoloMin && visuale.eulerAngles.x <= angoloMax)
-        {
+        transform.position = new Vector3(visuale.position.x, transform.position.y, 0);
+        if (visuale.eulerAngles.x >= angoloMin && visuale.eulerAngles.x <= angoloMax)
             cc.SimpleMove(visuale.forward * speed);
-        }   
+        else
+            cc.SimpleMove(visuale.forward * y * speed + visuale.right * x * speed);
+        visuale.rotation = Quaternion.Euler(visuale.eulerAngles.x - mouseY, visuale.eulerAngles.y + mouseX, 0);
     }
     //movimento tramite nuovo sistema input
-    void OnMove(InputValue movementvalue)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        Vector2 movementVector = movementvalue.Get<Vector2>();
-        v = movementVector.y;
-        h = movementVector.x;
+        Vector2 movementVector = context.ReadValue<Vector2>();
+        y = movementVector.y;
+        x = movementVector.x;
     }
     //rotazione tramite nuovo sistema input
-    void OnLook(InputValue lookvalue)
+    public void OnLook(InputAction.CallbackContext context)
     {
-        Vector2 lookVector = lookvalue.Get<Vector2>();
-        float mouseX = lookVector.x/2;
-        float mouseY = lookVector.y/2;
+        Vector2 lookVector = context.ReadValue<Vector2>();
+        mouseX = lookVector.x;
+        mouseY = lookVector.y;
+    }
 
-        if (mouseX != 0 || mouseY != 0)     //se c'è movimento mouse
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if(context.performed)
         {
-            //si tiene conto solo del movimento prevalente: se maggiore orizzontale rotazione sx-dx se maggiore verticale rotazione alto-basso
-            if (Mathf.Abs(mouseX) > Mathf.Abs(mouseY))
-                cc.transform.Rotate(0, mouseX, 0, Space.World);
-            else if((visuale.eulerAngles.x - mouseY >= 360 - angoloMax || visuale.eulerAngles.x - mouseY <= angoloMax) && (visuale.eulerAngles.x - mouseY <= 360 - angoloMax || visuale.eulerAngles.x - mouseY >= angoloMax))
-                cc.transform.Rotate(-mouseY, 0, 0, Space.Self);
+            vrModeController.ToggleVR();
         }
     }
 }
