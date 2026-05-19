@@ -20,6 +20,7 @@ using System.Collections;
 using Google.XR.Cardboard;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Android;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Utilities;
 using UnityEngine.XR;
@@ -39,19 +40,7 @@ public class VrModeController : MonoBehaviour
 
     // Main camera from the scene.
     private Camera _mainCamera;
-
-    /// <summary>
-    /// Gets a value indicating whether the screen has been touched this frame.
-    /// </summary>
-    private bool _isScreenTouched
-    {
-        get
-        {
-            TouchControl touch = GetFirstTouchIfExists();
-            return touch != null && touch.phase.ReadValue() == InputSystemTouchPhase.Began;
-        }
-    }
-
+    Google.XR.Cardboard.XRLoader loader;
     /// <summary>
     /// Gets a value indicating whether the VR mode is enabled.
     /// </summary>
@@ -62,14 +51,13 @@ public class VrModeController : MonoBehaviour
             return XRGeneralSettings.Instance.Manager.isInitializationComplete;
         }
     }
-
     /// <summary>
     /// Start is called before the first frame update.
     /// </summary>
     public void Start()
     {
         // Saves the main camera from the scene.
-        _mainCamera = Camera.main;
+        _mainCamera = transform.GetChild(0).GetComponent<Camera>();
 
         // Configures the app to not shut down the screen and sets the brightness to maximum.
         // Brightness control is expected to work only in iOS, see:
@@ -90,60 +78,17 @@ public class VrModeController : MonoBehaviour
     /// <summary>
     /// Update is called once per frame.
     /// </summary>
-    public void Update()
+    public void ToggleVR()
     {
         if (_isVrModeEnabled)
         {
-            if (Api.IsCloseButtonPressed)
-            {
-                ExitVR();
-            }
+           StopXR();
 
-            if (Api.IsGearButtonPressed)
-            {
-                Api.ScanDeviceParams();
-            }
-
-            Api.UpdateScreenParams();
         }
         else
         {
-            // TODO(b/171727815): Add a button to switch to VR mode.
-            if (_isScreenTouched)
-            {
-                EnterVR();
-            }
+          EnterVR();
         }
-    }
-
-    /// <summary>
-    /// Checks if the screen has been touched during the current frame.
-    /// </summary>
-    ///
-    /// <returns>
-    /// The first touch of the screen during the current frame. If the screen hasn't been touched,
-    /// returns null.
-    /// </returns>
-    private static TouchControl GetFirstTouchIfExists()
-    {
-        Touchscreen touchScreen = Touchscreen.current;
-        if (touchScreen == null)
-        {
-            return null;
-        }
-
-        if (!touchScreen.enabled)
-        {
-            InputSystem.EnableDevice(touchScreen);
-        }
-
-        ReadOnlyArray<TouchControl> touches = touchScreen.touches;
-        if (touches.Count == 0)
-        {
-            return null;
-        }
-
-        return touches[0];
     }
 
     /// <summary>
@@ -156,14 +101,6 @@ public class VrModeController : MonoBehaviour
         {
             Api.ReloadDeviceParams();
         }
-    }
-
-    /// <summary>
-    /// Exits VR mode.
-    /// </summary>
-    private void ExitVR()
-    {
-        StopXR();
     }
 
     /// <summary>
@@ -202,12 +139,12 @@ public class VrModeController : MonoBehaviour
         Debug.Log("Stopping XR...");
         XRGeneralSettings.Instance.Manager.StopSubsystems();
         Debug.Log("XR stopped.");
-
+        loader.Stop();
+        loader.Deinitialize();
         Debug.Log("Deinitializing XR...");
         XRGeneralSettings.Instance.Manager.DeinitializeLoader();
         Debug.Log("XR deinitialized.");
-
-        _mainCamera.ResetAspect();
         _mainCamera.fieldOfView = _defaultFieldOfView;
+        _mainCamera.ResetAspect();
     }
 }

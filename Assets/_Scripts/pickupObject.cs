@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pickupObject : MonoBehaviour {
-
-    public Vector3 position;
-    public Vector3 rotation;
 
     private Transform vrCam;
     private Transform hand;
@@ -13,8 +11,8 @@ public class pickupObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        vrCam = Camera.main.transform;
-        hand = vrCam.Find("Hand");
+        vrCam = SceneManager.GetSceneByName("VRMain").GetRootGameObjects()[0].transform;
+        hand = vrCam.Find("Main Camera").Find("Hand");
         Debug.Log("Hand found: " + hand.name);
 	}
 	
@@ -28,7 +26,7 @@ public class pickupObject : MonoBehaviour {
         transform.parent = hand;
         /*transform.localPosition = Vector3.zero;
         transform.localEulerAngles = Vector3.zero;*/
-        transform.localPosition = position;
-        transform.localEulerAngles = rotation;
+        transform.localPosition = new Vector3(-0.113f, 0.047f, -0.447f);
+        transform.localEulerAngles = new Vector3(-140.6f, -16.96f, 0);
     }
 }
