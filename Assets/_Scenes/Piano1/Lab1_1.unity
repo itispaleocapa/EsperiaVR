@@ -3096,7 +3096,7 @@ Transform:
 --- !u!64 &431961634
 MeshCollider:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6400000, guid: 9f99780a21ab2354fa723e2c794ba67f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431961632}
@@ -8405,7 +8405,7 @@ MonoBehaviour:
   oggetto: {fileID: 797946321}
   matAcceso: {fileID: 2100000, guid: c7b60e8480a4ebf4cb2bd25d0bf7aee0, type: 2}
   matSpento: {fileID: 2100000, guid: 443a4cd67ed83274a95c02099c5c70b7, type: 2}
-  oggettoRichiesto: {fileID: 0}
+  oggettoRichiesto: {fileID: 7717702787889603617}
 --- !u!65 &1438137278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11550,6 +11550,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5f1caf83df0c5b41a3b67b58d03e8cb, type: 3}
+--- !u!4 &7717702787889603617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8644967028061806841, guid: e5f1caf83df0c5b41a3b67b58d03e8cb, type: 3}
+  m_PrefabInstance: {fileID: 7717702787889603616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

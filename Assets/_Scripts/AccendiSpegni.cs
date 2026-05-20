@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class AccendiSpegni : MonoBehaviour
 {
@@ -12,13 +13,15 @@ public class AccendiSpegni : MonoBehaviour
 
     private MeshRenderer myRenderer;    
     private bool acceso;
+    private Transform vrCam;
     private Transform hand;
 
     // Use this for initialization
     void Start()
     {
         myRenderer = oggetto.GetComponent<MeshRenderer>();
-        hand = Camera.main.transform.Find("Hand");
+        vrCam = SceneManager.GetSceneByName("VRMain").GetRootGameObjects()[0].transform;
+        hand = vrCam.Find("Main Camera").Find("Hand");
     }
 
     public void ToggleStatus()
